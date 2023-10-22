@@ -32,9 +32,9 @@ public class DataHelper extends SQLiteOpenHelper {
 
     public void insertData(String no, String nama, String tlahir, String jk, String alamat) {
         SQLiteDatabase db = this.getWritableDatabase(); // Mendapatkan referensi ke database untuk menulis data.
-
+``
         // Membuat perintah SQL INSERT sesuai dengan data yang diterima.
-        String sql = "INSERT INTO biodata (no, nama, tgl, jk, alamat) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO biodata(no, nama, tgl, jk, alamat) VALUES (?, ?, ?, ?, ?)";
         Object[] bindArgs = {no, nama, tlahir, jk, alamat};
 
         try {
